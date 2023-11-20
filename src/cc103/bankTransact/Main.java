@@ -1,4 +1,4 @@
-package bankTransact;
+package cc103.bankTransact;
 
 import java.util.Scanner;
 class Account {
@@ -19,9 +19,9 @@ class Account {
 
     public void getBalance() {
         System.out.println("==============================================");
-        System.out.println("||             Account Balance              ||");
-        System.out.print("||                                          ||");
-        System.out.printf("\n|| Current balance for %d:    %,d\t\t||", number, balance);
+        System.out.println("             Account Balance              ");
+        System.out.print("                                          ");
+        System.out.printf("\n Current balance for %d:    %,d\t\t", number, balance);
         System.out.println("\n==============================================");
     }
 
@@ -55,13 +55,13 @@ class Account {
 public class Main {
     private static void createTUI(int accountNumber) {
         System.out.println("==============================================");
-        System.out.print("||                                          ||");
-        System.out.printf("\n||         Bank Transaction for %d         ||\n", accountNumber);
-        System.out.print("||                                          ||\n");
-        System.out.println("||         [1] Withdraw Cash                ||");
-        System.out.println("||         [2] Deposit Cash                 ||");
-        System.out.println("||         [3] Balance Inquiry              ||");
-        System.out.print("||                                          ||\n");
+        System.out.print("                                          ");
+        System.out.printf("\n         Bank Transaction for %d         \n", accountNumber);
+        System.out.print("                                          \n");
+        System.out.println("         [1] Withdraw Cash                ");
+        System.out.println("         [2] Deposit Cash                 ");
+        System.out.println("         [3] Balance Inquiry              ");
+        System.out.print("                                          \n");
         System.out.println("==============================================");
         System.out.println();
     }
@@ -118,11 +118,13 @@ public class Main {
             String transactionOption = entry.nextLine();
 
             if (!transactionOption.equalsIgnoreCase("Yes")) {
+                entry.close();
                 System.out.print("Exiting system...");
                 System.exit(0);
             }
         }
         while (true);
+
 
     }
 }
