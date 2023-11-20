@@ -98,6 +98,10 @@ public class Main {
         System.out.print("Enter the service to rent (1/2): ");
         int service = entry.nextInt();
 
+        if (service != 1 || service != 2) {
+            System.out.print("Service to rent must only be 1 or 2. Exiting system...");
+            System.exit(1);
+        }
         loadServiceTUI(service);
 
         if (service  == 1) {
